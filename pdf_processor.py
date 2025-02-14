@@ -8,6 +8,6 @@ def extract_text_from_pdf(pdf_path):
     return text
 
 if __name__ == "__main__":
-    pdf_path = "data/Lecture_notes_module_3.pdf"  # Replace with your PDF file path
+    pdf_path = "data/test_qnaforge.pdf"  # Replace with your PDF file path
     text = extract_text_from_pdf(pdf_path)
     print(text[:500])  # Display first 500 characters

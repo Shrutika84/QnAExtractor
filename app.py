@@ -10,14 +10,14 @@ if uploaded_file:
     with open("data/uploaded.pdf", "wb") as f:
         f.write(uploaded_file.read())
 
-    st.success("✅ PDF Uploaded Successfully!")
+    st.success("PDF Uploaded Successfully!")
 
     # Extract text
     text = extract_text_from_pdf("data/uploaded.pdf")
     st.text_area("Extracted Text", text[:500], height=150)
 
     if st.button("Generate Questions"):
-        questions = generate_questions(text[:1000])  # Use first 1000 chars
+        questions = generate_questions(text[:1000])  
         st.write(questions)
 
         for q in questions.split("\n"):
